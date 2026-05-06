@@ -27,7 +27,9 @@ public class WebSecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/registration/**").permitAll()
+                        .requestMatchers("/api/v1/registration",
+                                "/api/v1/registration/**"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .authenticationProvider(daoAuthenticationProvider())
