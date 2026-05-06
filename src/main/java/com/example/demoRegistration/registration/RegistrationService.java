@@ -46,6 +46,7 @@ public class RegistrationService {
 
         // Step 3 — build confirmation link
         String link = "http://localhost:8080/api/v1/registration/confirm?token=" + token;
+        link="http://registration-java.up.railway.app";
 
         // Step 4 — send confirmation email
         // emailSender.send(request.getEmail(), buildEmail(request.getFirstName(), link));
